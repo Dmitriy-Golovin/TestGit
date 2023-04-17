@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title th:text="${title}"></title>
+        <link rel="stylesheet" type="text/css" href="/css/main.css">
+    </head>
+    <body>
+        <header>
+            <a class="logo" href="/">Приложение</a>
+        </header>
+        <div class="main">
+            <h1 th:text="${title}"></h1>
+            <a class="btn_add" href="/add">Добавить товар</a>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Название</th>
+                        <th>Цена</th>
+                        <th>Вес</th>
+                        <th>Поставщик</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tr th:each="product : ${product}">
+                    <td th:text="${product.getId}"></td>
+                    <td th:text="${product.getName}"></td>
+                    <td th:text="${product.getPrice}"></td>
+                    <td th:text="${product.getWeight}"></td>
+                    <td th:text="${product.getProvider}"></td>
+                    <td class="btn_box"><a th:href="@{/details/{id}(id=${product.getId()})}">детали</a></td>
+                </tr>
+            </table>
+        </div>
+        <footer>
+            <a class="logo" href="/">application.ru</a>
+        </footer>
+    </body>
+</html>
