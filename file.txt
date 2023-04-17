@@ -4,4 +4,5 @@ changed
 
 branch master
 
-Вносим изменения в файл в ветке developer
+Вносим изменения в файл в ветке developer branch developer
+
