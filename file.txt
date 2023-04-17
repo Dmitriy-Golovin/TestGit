@@ -3,3 +3,5 @@ file
 changed
 
 branch master
+
+Вносим изменения в файл в ветке developer
